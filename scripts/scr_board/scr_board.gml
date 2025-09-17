@@ -20,8 +20,7 @@ function board_flexpanel_create(_layout, _width, _height){
             width: _width,
             height: _height,
             data: {
-               cell_type: _layout[_row][_col],
-               tile: ""
+               cell_type: _layout[_row][_col]
             },
          }), _col);
       }
@@ -76,22 +75,17 @@ function draw_board_from_flexpanel(_flex) {
          var _pos = flexpanel_node_layout_get_position(_cell, false);
          var _data = flexpanel_node_get_data(_cell);
          
-         if (_data.tile == "") {
-            // Case where no tile is played on the cell
-            var _draw_cell_id = 0;
-            if (struct_exists(_draw_cell_struct, _data.cell_type)) {
-               _draw_cell_id = struct_get(_draw_cell_struct, _data.cell_type);
-            }
-            // Draw the cell
-            draw_sprite_ext(
-               spr_cell, _draw_cell_id, _pos.left, _pos.top,
-               _pos.width / sprite_get_width(spr_cell), _pos.height / sprite_get_height(spr_cell),
-               0, c_white, 1
-            );
-         } else {
-            // Case where a tile has been played on the cell
-            draw_number_tile(_pos.left, _pos.top, _data.tile, c_white);
-         }
+        // Case where no tile is played on the cell
+        var _draw_cell_id = 0;
+        if (struct_exists(_draw_cell_struct, _data.cell_type)) {
+           _draw_cell_id = struct_get(_draw_cell_struct, _data.cell_type);
+        }
+        // Draw the cell
+        draw_sprite_ext(
+           spr_cell, _draw_cell_id, _pos.left, _pos.top,
+           _pos.width / sprite_get_width(spr_cell), _pos.height / sprite_get_height(spr_cell),
+           0, c_white, 1
+        );
       }
    }
 }

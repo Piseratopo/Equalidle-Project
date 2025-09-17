@@ -11,7 +11,7 @@ if (mouse_check_button(mb_middle)) {
 var _wheel = mouse_wheel_down() - mouse_wheel_up();
 
 if (_wheel != 0) {
-   _wheel *= 0.05;
+   _wheel *= 0.1;
    
    var _add_width = board_camera_width * _wheel;
    var _add_height = board_camera_height * _wheel;

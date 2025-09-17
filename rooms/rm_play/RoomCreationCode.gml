@@ -9,9 +9,5 @@ global.fnt_text = font_add_sprite_ext(
 	global.allow_characters,
 	true, 2
 );
-global.tile_score_dictionary = {
-   ts0: 1,
-   ts1: 1,
-   ts2: 1,
-   ts3: 1
-}
+
+write_tiles_properties_json();
