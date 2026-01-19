@@ -20,7 +20,8 @@ function board_flexpanel_create(_layout, _width, _height){
             width: _width,
             height: _height,
             data: {
-               cell_type: _layout[_row][_col]
+               cell_type: _layout[_row][_col],
+               tile: ""
             },
          }), _col);
       }

@@ -1,31 +1,9 @@
-board_camera_width = camera_get_view_width(board_camera);
-board_camera_height = camera_get_view_height(board_camera);
-
-// Pan
-if (mouse_check_button(mb_middle)) {
-   board_camera_x += mouse_x_previous - device_mouse_x_to_gui(0);
-   board_camera_y += mouse_y_previous - device_mouse_y_to_gui(0);
+if (!is_undefined(obj_board_controller.board_layout)) {
+   var _current_board_layout = obj_board_controller.board_layout;
+   board_camera_height = sprite_get_height(spr_fnt_tile) * array_length(_current_board_layout) + 2 * board_camera_padding;
+   board_camera_width = sprite_get_height(spr_fnt_tile) * array_length(_current_board_layout[0]) + 2 * board_camera_padding;
+   camera_set_view_size(view_camera[0], board_camera_width, board_camera_height);
+   
+   view_board_width = view_board_height * board_camera_width / board_camera_height;
+   view_wport[0] = view_board_width;
 }
-
-// Zoom
-var _wheel = mouse_wheel_down() - mouse_wheel_up();
-
-if (_wheel != 0) {
-   _wheel *= 0.1;
-   
-   var _add_width = board_camera_width * _wheel;
-   var _add_height = board_camera_height * _wheel;
-   
-   board_camera_width += _add_width;
-   board_camera_height += _add_height;
-   
-   board_camera_x -= _add_width / 2;
-   board_camera_y -= _add_height / 2;
-}
-
-camera_set_view_pos(board_camera, board_camera_x, board_camera_y);
-camera_set_view_size(board_camera, board_camera_width, board_camera_height);
-
-// Store previous values
-mouse_x_previous = device_mouse_x_to_gui(0);
-mouse_y_previous = device_mouse_y_to_gui(0);

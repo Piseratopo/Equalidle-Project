@@ -32,7 +32,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"Mathzzle",
   "resources":[
@@ -40,6 +40,7 @@
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_rack_controller","path":"objects/obj_rack_controller/obj_rack_controller.yy",},},
     {"id":{"name":"rm_play","path":"rooms/rm_play/rm_play.yy",},},
+    {"id":{"name":"scr_archived","path":"scripts/scr_archived/scr_archived.yy",},},
     {"id":{"name":"scr_board","path":"scripts/scr_board/scr_board.yy",},},
     {"id":{"name":"scr_json","path":"scripts/scr_json/scr_json.yy",},},
     {"id":{"name":"scr_tile","path":"scripts/scr_tile/scr_tile.yy",},},

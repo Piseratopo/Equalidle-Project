@@ -1,5 +1,5 @@
-square_width = sprite_get_width(spr_fnt_tile);
-square_height = sprite_get_height(spr_fnt_tile);
+square_width = sprite_get_width(spr_tile);
+square_height = sprite_get_height(spr_tile);
 
 /*
  * Convention:
