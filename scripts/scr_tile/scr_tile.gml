@@ -1,3 +1,19 @@
+/**
+ * Represents a tile property with a name, value, and associated buffs.
+ *
+ * @constructor
+ * @param {string} _name - The name of the tile property.
+ * @param {number} _value - The numeric value assigned to the property.
+ * @param {Array} _buffs - A collection of buffs or modifiers linked to the property.
+ *
+ */
+function TileProperty(_name, _value, _buffs=[]) constructor {
+    name = _name;
+    value = _value;
+    buffs = _buffs;
+}
+
+
 /*
  * @description This function will draw a single tile
  * @parameter {Real} _x The x coordinate of the tile
@@ -28,3 +44,4 @@ function draw_number_tile(_x, _y, _type_id, _color=c_white){
    draw_set_font(_store_font);
    draw_set_halign(_store_halign);
 }
+

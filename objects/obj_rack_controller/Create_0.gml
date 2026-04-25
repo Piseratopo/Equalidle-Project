@@ -1,4 +1,6 @@
-rack = ["tile_0", "tile_1", "tile_0", "tile_2"];
+rack = [
+   new TileProperty("tile_0", 1)
+];
 max_rack_size = 8;
 
 rack_flexpanel = flexpanel_create_node({
@@ -7,8 +9,8 @@ rack_flexpanel = flexpanel_create_node({
 
 for (var _i = 0; _i < max_rack_size; _i++) {
    flexpanel_node_insert_child(rack_flexpanel, flexpanel_create_node({
-      width: sprite_get_width(spr_tile),
-      height: sprite_get_height(spr_tile)
+      width: global.tile_width,
+      height: global.tile_height
    }), 0)
 }
 
