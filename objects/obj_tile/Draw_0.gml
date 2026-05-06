@@ -1,6 +1,8 @@
 var _store_halign = draw_get_halign();
 var _store_font = draw_get_font();
+var _store_color = draw_get_colour();
 draw_set_halign(fa_center);
+draw_set_colour(c_black);
 
 draw_self();
 
@@ -14,3 +16,4 @@ draw_text(
 
 draw_set_font(_store_font);
 draw_set_halign(_store_halign);
+draw_set_colour(_store_color);

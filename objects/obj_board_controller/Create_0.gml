@@ -20,3 +20,5 @@ board_layout = [
 ];
 
 flexpanel_board_layout = board_flexpanel_create(board_layout, square_width, square_height);
+
+board_placement = create_blank_board_data(board_layout);

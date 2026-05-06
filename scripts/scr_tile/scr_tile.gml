@@ -1,7 +1,6 @@
 /**
  * Represents a tile property with a name, value, and associated buffs.
  *
- * @constructor
  * @param {string} _name - The name of the tile property.
  * @param {number} _value - The numeric value assigned to the property.
  * @param {Array} _buffs - A collection of buffs or modifiers linked to the property.
@@ -14,8 +13,9 @@ function TileProperty(_name, _value, _buffs=[]) constructor {
 }
 
 
-/*
- * @description This function will draw a single tile
+/**
+ * This function will draw a single tile
+ * 
  * @parameter {Real} _x The x coordinate of the tile
  * @parameter {Real} _y The y coordinate of the tile
  * @parameter {String} _type_id The id of the type of the tile

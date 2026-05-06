@@ -38,3 +38,22 @@ function panning(){
 	mouse_x_previous = device_mouse_x_to_gui(0);
 	mouse_y_previous = device_mouse_y_to_gui(0);
 }
+
+/**
+ * @description Return a clear board with no played tile from a given layout
+ * @parameter {Pointer.FlexpanelNode} _flex The flexpanel layout of the board
+ * @return {Undefined}
+ */
+function clear_board(_flex) {
+   for (var _i = 0; _i < flexpanel_node_get_num_children(_flex); _i++) {
+      // Get the row
+      var _row = flexpanel_node_get_child(_flex, _i);
+      
+      for (var _j = 0; _j < flexpanel_node_get_num_children(_row); _j++) {
+         var _cell = flexpanel_node_get_child(_row, _j);
+         var _data = flexpanel_node_get_data(_cell);
+         
+         _data.tile = "";
+      }
+   }
+}

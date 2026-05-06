@@ -1,3 +1,7 @@
+// Macro
+
+#macro BLANK_DATA -1
+
 // Tile settings
 
 tile_width = sprite_get_width(spr_tile);
