@@ -3,13 +3,20 @@
  *
  * @param {string} _name - The name of the tile property.
  * @param {number} _value - The numeric value assigned to the property.
+ * @param {bool} _playable - The state whether the tile is playable or not
  * @param {Array} _buffs - A collection of buffs or modifiers linked to the property.
  *
  */
-function TileProperty(_name, _value, _buffs=[]) constructor {
-    name = _name;
-    value = _value;
-    buffs = _buffs;
+function TileProperty(_name, _value, _playable = true, _buffs=[]) constructor {
+   name = _name;
+   value = _value;
+   buffs = _buffs;
+   playable = _playable;
+   placed = false;
+   
+   static setPlaced = function () {
+      placed = true;
+   }
 }
 
 

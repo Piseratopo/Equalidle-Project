@@ -8,4 +8,7 @@ image_name_id = {
 
 image_index = image_name_id[$ name];
 
+x_org = x;
+y_org = y;
+
 clicked = false;
