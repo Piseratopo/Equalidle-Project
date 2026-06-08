@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_archived",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Archived",
+    "path":"folders/Scripts/Archived.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

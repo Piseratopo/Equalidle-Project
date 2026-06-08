@@ -60,7 +60,7 @@ function get_position_on_board(_flex_layout, _x, _y) {
       }
    }
    
-   return false;
+   return BLANK_DATA;
 }
 
 

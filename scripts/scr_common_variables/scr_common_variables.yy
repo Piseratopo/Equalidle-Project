@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_common_variables",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Common",
+    "path":"folders/Scripts/Common.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

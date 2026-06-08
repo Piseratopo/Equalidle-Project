@@ -24,5 +24,4 @@ flexpanel_board_layout = board_flexpanel_create(board_layout, square_width, squa
 flexpanel_calculate_layout(flexpanel_board_layout, room_width, room_height, flexpanel_direction.LTR);
 
 board_placement = create_blank_board_data(board_layout);
-//board_placement[3][2] = new TileProperty("tile_0", 1, false);
 placement_refreshed = false;

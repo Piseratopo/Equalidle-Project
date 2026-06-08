@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_json",
+  "%Name":"scr_rack",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_json",
+  "name":"scr_rack",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

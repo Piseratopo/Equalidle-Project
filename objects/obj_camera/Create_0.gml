@@ -17,7 +17,7 @@ board_camera = camera_create_view(
    board_camera_width, board_camera_height
 );
 
-view_board_height = display_get_height() / 4 * 3;
+view_board_height = 840;
 view_board_width = view_board_height;
 view_set_camera(0, board_camera);
 view_wport[0] = view_board_width;
