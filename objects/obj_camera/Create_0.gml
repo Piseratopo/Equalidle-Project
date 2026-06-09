@@ -25,12 +25,15 @@ view_hport[0] = view_board_height;
 
 // Rack
 
-rack_camera_x = -32;
-rack_camera_y = -288;
+rack_flexpanel = flexpanel_node_layout_get_position(obj_rack.bottom_flexpanel, false)
+
+rack_camera_x = rack_flexpanel.left - 32;
+rack_camera_y = rack_flexpanel.top - 32;
 
 view_rack_height = display_get_height() - view_board_height;
 view_rack_width = display_get_width();
-rack_camera_height = sprite_get_height(spr_tile) + 64;
+
+rack_camera_height = rack_flexpanel.height + 64;
 rack_camera_width = rack_camera_height * view_rack_width / view_rack_height;
 
 rack_camera = camera_create_view(

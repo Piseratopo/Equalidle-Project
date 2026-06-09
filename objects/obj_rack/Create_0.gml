@@ -13,7 +13,7 @@ actions = [
 max_rack_size = 10;
 
 bottom_flexpanel = flexpanel_create_node({
-	left: 0, top: -256,
+	left: 0, top: -512, 
 	nodes: [
 		{
 			flexDirection: "row", gap: 8
